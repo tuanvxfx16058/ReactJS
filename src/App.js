@@ -8,7 +8,7 @@ class App extends Component {
         <p>Sample cho toàn bộ lab và project trong môn học Lập Trình Web Front-End với React với đầy đủ dependency.</p>
         <p>Phiên bản React hiện tại trên máy của bạn là: {React.version}</p>
         <p>Phiên bản React đã được sử dụng để thiết kế môn học: 16.14.0.</p>
-        <h1>đây là bài Lab02.1</h1>
+        <h1>Bai Lab02.1</h1>
       </div>
     );
   }
