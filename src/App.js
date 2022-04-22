@@ -3,7 +3,6 @@ import {Navbar, NavbarBrand} from 'reactstrap';
 import Menu from './components/MenuComponent'
 
 import './App.css';
-//import { formatTimezone } from 'dateformat';
 class App extends Component {
 
   render() {
