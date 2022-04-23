@@ -9,13 +9,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-
+<BrowserRouter>
 ReactDOM.render(
-  <BrowserRouter>
+  
     <App />,
-    </BrowserRouter>
+  
   document.getElementById('root')
-);
+);</BrowserRouter>
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
