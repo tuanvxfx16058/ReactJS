@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {Navbar, NavbarBrand} from 'reactstrap'; 
-import Menu from './components/MenuComponent'
-import Home from '../pages/Home';
-import News from '../pages/News';
-import Contact from '../pages/Contact';
+// import Menu from './components/MenuComponent'
+// import {Routers, Router} from 'react-router-dom'
+import Home from './components/Home'
+import News from './components/News'
+import Contact from './components/Contact';
 
 import './App.css';
 class App extends Component {
@@ -17,18 +18,13 @@ class App extends Component {
           </div> 
         </Navbar>
         
-        <React.Fragment>
-<ul>
-  <li><Home/></li>
-  <li><News/></li>
+       <div className='container'>
+       tuấn
+       <Home/>
 
-  <li><Contact/></li>
-
-</ul>
-
-        </React.Fragment>
+        </div>
         
-        <Menu/>
+      
       </div>
     );
   }
