@@ -1,14 +1,35 @@
 import React, { Component } from 'react';
+import { Route, Router, Routes   } from 'react-router-dom'
+import Contac from '../pages/Contac';
+import Home from '../pages/Home';
+import News from '../pages/News';
 import './App.css';
 class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <p>Sample cho toàn bộ lab và project trong môn học Lập Trình Web Front-End với React với đầy đủ dependency.</p>
-        <p>Phiên bản React hiện tại trên máy của bạn là: {React.version}</p>
-        <p>Phiên bản React đã được sử dụng để thiết kế môn học: 16.14.0.</p>
+          <ul>
+            <li>
+              <a href='/'>Home</a>
+            </li>
+            <li>
+              <a href='/News'>News</a>
+            </li>
+            <li>
+              <a href='/Contact'>Contact</a>
+            </li>
+          </ul>
+          <Routes>
+        <Route path='/' element = {Home}></Route>
+        <Route path='/News' element = {News}></Route>
+
+        <Route path='/contac' element = {Contac}></Route>
+
+</Routes>
       </div>
+
+
     );
   }
 }
