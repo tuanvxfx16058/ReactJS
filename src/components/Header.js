@@ -22,7 +22,7 @@ export default class Header extends Component {
 
     render() {
         return(
-            //<i class="bi bi-people-fill"></i> 
+           
             <div >
                 <Navbar style={{backgroundColor:'#007bff'}} dark expand="md" >
                     <div className="container">
