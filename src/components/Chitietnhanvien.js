@@ -7,7 +7,6 @@ export default function Chitietnhanvien(props) {
   return (
     <div className="container">
       <div className="row">
-        
         <Breadcrumb>
           <BreadcrumbItem>
             <Link to="/nhanvien">Nhân Viên</Link>
