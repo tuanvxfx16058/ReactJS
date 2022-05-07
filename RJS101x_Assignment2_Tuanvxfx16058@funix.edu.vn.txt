@@ -1,0 +1,8 @@
+https://github.com/tuanvxfx16058/ASM2.git
+
+RJS101x_Assignment2_tuanvxfx16058@funix.edu.vn
+
+Phần thuyết minh dự án có trong file product.drawio (mở trong VSCode).
+
+Vũ Xuân Tuấn.
+Xin cảm ơn Mentor
