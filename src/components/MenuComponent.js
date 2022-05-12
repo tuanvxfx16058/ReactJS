@@ -22,6 +22,7 @@ export default function Menu(props) {
       </div>
     ); 
   });
+  
   return (
     <div className="container">
       <div className="row">{menu}</div>
