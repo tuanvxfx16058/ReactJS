@@ -44,23 +44,11 @@ const RenderNhanvien = ({staff}) => {
     else if (search.length > 0) {
       setSearchStaff(search);
     }
-    // else setSearchStaff([...props.staff]);
   };
 
 
  
-  // const onAddStaff = (staff) => {
-  //   props.onAddStaff(staff);
-  // };
  
-//Thêm nhân viên mới 
-// const onAddstaff=(newstaff)=>{
-//   props.onAddstaff(newstaff)
-// }
-
-//render giao diện
-//giao diện ban đầu Load là giá trị mà Hook khởi tạo ban đầu
-//nếu tìm kiếm thấy thì dùng giá trị mới (giá trị mới này do Hook thực hiện) để render 
   const nhanvien = searchStaff.map((value) => {
     return (
       <div key={value.id} className="col-6 col-sm-4 col-md-2">
