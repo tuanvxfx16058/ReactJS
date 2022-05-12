@@ -65,7 +65,7 @@ const RenderNhanvien = ({staff}) => {
         <Col md={2}>Nhân Viên</Col>
         <Col md={1}>
           {/* <Button color="secondary"  */}
-          {/* <AddStaff staffs={props.staffs} onStaff={props.onAddStaff} /> */}
+          <AddStaff staffs={props.staffs} onStaff={props.onAddStaff} />
           {/* >Thêm</Button> */}
         </Col>
         <Col md={9}>
