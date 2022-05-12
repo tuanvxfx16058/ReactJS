@@ -1,67 +1,49 @@
-import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody,
-    CardTitle } from 'reactstrap';
+import React from "react";
+import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
 
+export default function DetailDish(props) {
+    if (props.dish != null) {
+    //
+    
 
-class DishDetail extends Component{
-    renderDish(dish){
+    const RenderDetaidish = () => {
+      return (
+        <div className="col-12 col-md-2 col-sm-6">
+        <Card>
+          <CardImg src={props.dish.image}></CardImg>
+          <CardImgOverlay>
+            <CardTitle>{props.dish.name}</CardTitle>
+          </CardImgOverlay>
+        </Card>
+        </div>
+      );
+    };
+
+    //
+const RenderDetaiComment=()=>{
+    const comment=props.dish.comments.map((element)=>{
         return(
-            <div className='col-12 col-md-5 m-1'>
-                <Card>
-                    <CardImg width='100%' src={dish.image} value={dish.name}></CardImg>
-                    <CardBody>
-                        <CardTitle>{dish.name}</CardTitle>
-                        <CardText>{dish.description}</CardText>
-                    </CardBody>
-                </Card>
+            <div>
+                <b>{element.author}</b><br/>
+                {element.comment}<hr/>
             </div>
         )
-    }
+    })
+    return(
+        <div className="col-12 col-md-10 col-sm-6">
+            {comment}
+        </div>  
+    )
+}
 
-    RenderComments(comments){
-        if(comments!=null){
-            return(
-                <div className='col-12 col-md-5 m-1'>
-                    <h4>comments</h4>
-                    <ul className='List-unstyled'>
-                        {comments.map((comment)=>{
-                            return(
-                                <li key={comments.id}>
-                                    <p>{comment.comment}</p>
-                                    <p>--{comment.author},{new 
-                                    Intl.DateTimeFormat('en-US', 
-                                    { year: 'numeric', month: 'short', 
-                                    day: '2-digit'}).format(new Date
-                                    (Date.parse(comment.date)))}</p>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </div>
-            )
-        }else {
-            return(<div></div>)
-        }
-    }
-    
-        render(){
-            if (this.props.dish!=null){
-                return (
-                    <div className='container'>
-                        <div className='row'>
-                            {this.renderDish(this.props.dish)}
-                            {this.RenderComments(this.props.dish.comments)}
-                        </div>
-                    </div>
-                )
 
-            }else{
-                return (
-                    <div></div>
-                )
-            }
-        }
-      
-        }
-
-export default DishDetail;
+    return (
+      <div className="container">
+        <div className="row">
+          <RenderDetaidish />
+          <RenderDetaiComment/>
+        </div>
+      </div>
+    );
+  } else return <div></div>;
+}
