@@ -31,13 +31,13 @@ export default class Header extends Component {
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/nhanvien'><i class="fa fa-users" aria-hidden="true"></i> Nhân viên</NavLink>
+                                <NavLink className="nav-link"  to='/nhanvien'><i className="fa fa-users" aria-hidden="true"></i> Nhân viên</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to='/phongban'><i class="fa fa-briefcase" aria-hidden="true"></i>Phòng ban</NavLink>
+                                <NavLink className="nav-link" to='/phongban'><i className="fa fa-briefcase" aria-hidden="true"></i>Phòng ban</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/bangluong'><i class="fa fa-credit-card" aria-hidden="true"></i>Bảng lương</NavLink>
+                                <NavLink className="nav-link"  to='/bangluong'><i className="fa fa-credit-card" aria-hidden="true"></i>Bảng lương</NavLink>
                             </NavItem>
                             </Nav>
                         </Collapse>

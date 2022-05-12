@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { STAFFS } from "../staffs";
 import {
   BreadcrumbItem,
   Breadcrumb,
@@ -10,39 +9,46 @@ import {
   CardText,
   CardFooter,
 } from "reactstrap";
-// import Sapxep from "./Sapxep";
 
-function RenderBangluong() {
-  const bangluong = STAFFS.map((value) => {
+function RenderBangluong({bangluong}) {
+  
     return (
-      <div className="col-12 col-sm-6 col-md-4">
+      
         <Card className="m-1">
           <CardBody>
-            <CardTitle>{value.name}</CardTitle>
+            <CardTitle>{bangluong.name}</CardTitle>
             <CardText>
-              Mã nhân viên: {value.id}
+              Mã nhân viên: {bangluong.id}
               <br />
-              Hệ số lương: {value.salaryScale}
+              Hệ số lương: {bangluong.salaryScale}
               <br />
-              Số ngày làm thêm: {value.overTime}
+              Số ngày làm thêm: {bangluong.overTime}
               <br />
             </CardText>
             <CardFooter>
               Lương:{" "}
               {Math.round(
-                value.salaryScale * 3000000 + value.overTime * 200000
+                bangluong.salaryScale * 3000000 + bangluong.overTime * 200000
               )}
             </CardFooter>
           </CardBody>
         </Card>
-      </div>
-    );
-  });
+      
+    )};
+  
+  
 
-  return <React.Fragment>{bangluong}</React.Fragment>;
-}
+  
 
-export default function Bangluong() {
+const Bangluong= (props) =>{
+  const bangluong=props.staffs.map((value)=>{
+      return(
+        <div className="col-12 col-sm-6 col-md-4">
+            <RenderBangluong bangluong={value}/>
+        </div>
+      )
+  })
+  
   return (
     <div className="container">
       <div className="row">
@@ -55,12 +61,12 @@ export default function Bangluong() {
 
         <hr />
       </div>
-      {/* <div className="row">
-        <Sapxep />
-      </div> */}
+      
       <div className="row">
-        <RenderBangluong />
+       {bangluong}
       </div>
     </div>
   );
 }
+
+export default Bangluong;
