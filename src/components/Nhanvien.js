@@ -1,32 +1,35 @@
 import React from "react";
-import { STAFFS } from "../staffs";
 import { Card, CardImg, CardBody, CardText } from "reactstrap";
 import { Link } from "react-router-dom";
 
-const RenderNhanvien = (props) => {
-  const menu = props.staffs.map((value) => {
+const RenderNhanvien = ({staff}) => {
     return (
-      <div className="col-12 col-sm-4 col-md-2">
         <Card>
-          <Link to={`/nhanvien/${value.id}`}>
-            <CardImg src={value.image} alt={value.name} />
+          <Link to={`/nhanvien/${staff.id}`}>
+            <CardImg src={staff.image} alt={staff.name} />
           </Link>
           <CardBody>
-            <CardText>{value.name}</CardText>
+            <CardText>{staff.name}</CardText>
           </CardBody>
         </Card>
+    );
+  };
+
+
+const Nhanvien = (props) => {
+  const nhanvien = props.staffs.map((value) => {
+    return (
+      <div className="col-12 col-sm-4 col-md-2">
+        <RenderNhanvien staff={value} />
       </div>
     );
   });
-  return <React.Fragment>{menu}</React.Fragment>;
-};
 
-export default function Nhanvien() {
   return (
     <div className="container">
-      <div className="row">
-        <RenderNhanvien staffs={STAFFS} />
-      </div>
+      <div className="row">{nhanvien}</div>
     </div>
   );
-}
+};
+
+export default Nhanvien;

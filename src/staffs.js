@@ -42,7 +42,6 @@ export const STAFFS =
             annualLeave: 1,
             overTime: 1,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 1,
@@ -54,7 +53,6 @@ export const STAFFS =
             annualLeave: 2,
             overTime: 3,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 2,
@@ -66,7 +64,6 @@ export const STAFFS =
             annualLeave: 4,
             overTime: 5,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 3,
@@ -78,7 +75,6 @@ export const STAFFS =
             annualLeave: 6,
             overTime: 7,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['MANAGER_STAFF']
         },
         {
             id: 4,
@@ -90,7 +86,6 @@ export const STAFFS =
             annualLeave: 8,
             overTime: 1,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['MANAGER_STAFF']
         },
         {
             id: 5,
@@ -102,11 +97,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 6,
-            name: "Nguyễn Văn G",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -114,11 +108,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 7,
-            name: "Nguyễn Văn H",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -126,11 +119,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 8,
-            name: "Nguyễn Văn I",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -138,11 +130,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['MANAGER_STAFF']
         },
         {
             id: 9,
-            name: "Nguyễn Văn K",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -150,11 +141,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 10,
-            name: "Nguyễn Văn L",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -162,11 +152,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 11,
-            name: "Nguyễn Văn M",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -174,11 +163,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 12,
-            name: "Nguyễn Văn I",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -186,11 +174,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
         {
             id: 13,
-            name: "Nguyễn Văn J",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -198,11 +185,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['MANAGER_STAFF']
         },
         {
             id: 14,
-            name: "Nguyễn Văn O",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -210,11 +196,10 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['MANAGER_STAFF']
         },
         {
             id: 15,
-            name: "Nguyễn Văn P",
+            name: "Nguyễn Văn F",
             doB: "2003-01-01T08:59:00.000Z",
             salaryScale: 1,
             startDate: "2019-04-30T08:59:00.000Z",
@@ -222,7 +207,6 @@ export const STAFFS =
             annualLeave: 9,
             overTime: 10,
             image: '/assets/images/alberto.png',
-            chucdanh:ROLE['NORMAL_STAFF']
         },
 
     ]
