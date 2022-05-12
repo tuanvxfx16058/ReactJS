@@ -7,24 +7,25 @@ import Chitietnhanvien from "./Chitietnhanvien";
 import Phongban from "./Phongban";
 import Bangluong from "./Bangluong";
 
-import { STAFFS } from "../staffs";
-import { DEPARTMENTS } from '../staffs';
-import { Redirect, Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch, withRouter } from "react-router-dom";
+import { connect } from 'react-redux';
 
-
+const mapStateToProps = state => {
+  return {
+    staffs:state.staffs,
+  department:state.department,
+  }
+}
 
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      staffs: STAFFS,
-      department: DEPARTMENTS,
-    };
+ 
     this.onAddStaff=this.onAddStaff.bind(this)
   }
 
   onAddStaff = (newstaff) => {
-    this.setState({ staffs: [...this.state.staffs, newstaff] });
+    this.setState({ staffs: [...this.props.staffs, newstaff] });
   };
 
   render() {
@@ -32,7 +33,7 @@ class Main extends Component {
     const StaffId =({match})=>{
       console.log(match)
       return(
-        <Chitietnhanvien staff={this.state.staffs.filter((value)=>value.id===parseInt(match.params.Id,10))[0]}/>
+        <Chitietnhanvien staff={this.props.staffs.filter((value)=>value.id===parseInt(match.params.Id,10))[0]}/>
       )
     }
 
@@ -44,24 +45,24 @@ class Main extends Component {
           <Route
           exact
             path="/"
-            component={() => <Nhanvien staffs={this.state.staffs} onAddStaff={this.onAddStaff} />}
+            component={() => <Nhanvien staffs={this.props.staffs} onAddStaff={this.onAddStaff} />}
           />
           <Route
           exact
             path="/nhanvien"
-            component={() => <Nhanvien staffs={this.state.staffs}/>}
+            component={() => <Nhanvien staffs={this.props.staffs}/>}
           />
 
-          <Route exact  path='/nhanvien' component={()=><StaffId staff={this.state.staffs}/>}/>
+          <Route exact  path='/nhanvien' component={()=><StaffId staff={this.props.staffs}/>}/>
 
           <Route exact  path='/nhanvien/:Id' component={StaffId}/>
           <Route 
             path="/phongban"
-            component={() => <Phongban phongban={this.state.department} />}
+            component={() => <Phongban phongban={this.props.department} />}
           />
           <Route
             path="/bangluong"
-            component={() => <Bangluong staffs={this.state.staffs} />}
+            component={() => <Bangluong staffs={this.props.staffs} />}
           />
           <Redirect to="/nhanvien" />
         </Switch>
@@ -70,4 +71,4 @@ class Main extends Component {
     );
   }
 }
-export default Main;
+export default withRouter(connect(mapStateToProps)(Main));
