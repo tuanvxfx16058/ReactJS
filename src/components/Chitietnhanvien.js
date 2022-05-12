@@ -4,6 +4,7 @@ import { Breadcrumb, BreadcrumbItem, Card, CardImg } from "reactstrap";
 import dateFormat from "dateformat";
 
 export default function Chitietnhanvien(props) {
+  console.log(props.staff)
   return (
     <div className="container">
       <div className="row">

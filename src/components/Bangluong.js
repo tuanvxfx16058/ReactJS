@@ -55,9 +55,7 @@ export default function Bangluong() {
 
         <hr />
       </div>
-      {/* <div className="row">
-        <Sapxep />
-      </div> */}
+      
       <div className="row">
         <RenderBangluong />
       </div>
