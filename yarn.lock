@@ -4181,6 +4181,13 @@
   "resolved" "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz"
   "version" "2.5.5"
 
+"hoist-non-react-statics@^3.0.0":
+  "integrity" "sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw=="
+  "resolved" "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
+  "version" "3.3.2"
+  dependencies:
+    "react-is" "^16.7.0"
+
 "home-or-tmp@^2.0.0":
   "integrity" "sha1-42w/LSyufXRqhX440Y1fMqeILbg="
   "resolved" "https://registry.npmjs.org/home-or-tmp/-/home-or-tmp-2.0.0.tgz"
@@ -7582,7 +7589,7 @@
   "resolved" "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-4.0.1.tgz"
   "version" "4.0.1"
 
-"react-is@^16.8.1":
+"react-is@^16.7.0", "react-is@^16.8.1":
   "integrity" "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="
   "resolved" "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz"
   "version" "16.13.1"
@@ -7621,7 +7628,7 @@
     "react-native-segmented-control-tab" "^3.2.1"
     "shallow-compare" "^1.2.1"
 
-"react-redux@^4.0.0 || ^5.0.3", "react-redux@^5.0.7":
+"react-redux@^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0", "react-redux@^4.0.0 || ^5.0.3", "react-redux@^5.0.7":
   "integrity" "sha512-5VI8EV5hdgNgyjfmWzBbdrqUkrVRKlyTKk1sGH3jzM2M2Mhj/seQgPXaz6gVAj2lz/nz688AdTqMO18Lr24Zhg=="
   "resolved" "https://registry.npmjs.org/react-redux/-/react-redux-5.0.7.tgz"
   "version" "5.0.7"
@@ -7715,7 +7722,7 @@
     "prop-types" "^15.5.8"
     "warning" "^3.0.0"
 
-"react@^0.14.0 || ^15.0.0-0 || ^16.0.0-0", "react@^15.3.0 || ^16.0.0", "react@^16.0.0", "react@^16.14.0", "react@^16.3.2", "react@>=15", "react@>=15.0.0", "react@0.14.x || ^15.0.0 || ^16.0.0":
+"react@^0.14.0 || ^15.0.0-0 || ^16.0.0-0", "react@^0.14.0 || >=15.0.0", "react@^15.3.0 || ^16.0.0", "react@^16.0.0", "react@^16.14.0", "react@^16.3.2", "react@>=15", "react@>=15.0.0", "react@0.14.x || ^15.0.0 || ^16.0.0":
   "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.14.0.tgz"
   "version" "16.14.0"
@@ -7856,12 +7863,20 @@
   dependencies:
     "deep-diff" "^0.3.5"
 
+"redux-modal@^4.0.0":
+  "integrity" "sha512-N1JxjZbpkP3GyOBqEPnMP5Ik/VBEakDvdrXc3iu6+qPwsJ+Tj9uF0MvdA+Oxg43ZPHz1B1hGCZgCtvFUabFlRA=="
+  "resolved" "https://registry.npmjs.org/redux-modal/-/redux-modal-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "hoist-non-react-statics" "^3.0.0"
+    "prop-types" "^15.5.10"
+
 "redux-thunk@2.2.0":
   "integrity" "sha1-5hWhbha0ehmlFXZhM9Hj6Zt4UuU="
   "resolved" "https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.2.0.tgz"
   "version" "2.2.0"
 
-"redux@^2.0.0 || ^3.0.0 || ^4.0.0-0", "redux@^3.0.0", "redux@^3.7.2":
+"redux@^2.0.0 || ^3.0.0 || ^4.0.0-0", "redux@^3.0.0", "redux@^3.0.0 || ^4.0.0", "redux@^3.7.2":
   "integrity" "sha512-pNqnf9q1hI5HHZRBkj3bAngGZW/JMCmexDlOxw4XagXY2o1327nHH54LoTjiPJ0gizoqPDRqWyX/00g0hD6w+A=="
   "resolved" "https://registry.npmjs.org/redux/-/redux-3.7.2.tgz"
   "version" "3.7.2"

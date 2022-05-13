@@ -14,10 +14,16 @@ import { DEPARTMENTS } from "../staffs";
 
 
 const required = (val) => val && val.length;
+
 const maxLength = (len) => (val) => !val || val.length <= len;
 const minLength = (len) => (val) => val && val.length >= len;
 const isNumber = (val) => !Number.isNaN(Number(val));
-const numRange = (val) => val > 0 && val < 4;
+const numRange13 = (val) => val >=1  && val <= 3; //rải số từ 1-3
+const numRange10 = (val) =>  val <= 10; //ngày nghỉ còn lại dưới 10 ngày
+
+// const isNumber= (val)=>!Number.isFinite(Number(val))
+// const numRange = (val) => val > 0 && val < 4;
+// const numRange13 = (val) => Number(val) > 1 && Number(val) < 3; //rải số từ 1-3
 
 
 
@@ -45,9 +51,12 @@ class AddStaff extends Component {
   }
   //đóng mở hộp form Modal thêm nhân viên
   toggleModal(){
-    this.setState({isModalOpen:!this.state.isModalOpen})
-    console.log(this.state.isModalOpen)
-  }
+    this.setState({
+      isModalOpen:!this.state.isModalOpen
+    })
+    // alert(this.state.isModalOpen)
+    // console.log(this.state.isModalOpen)
+  } 
 
 
 
@@ -72,13 +81,10 @@ handleSubmit(values){
       overTime: values.overTime,
       image: "/assets/images/alberto.png",
   }
+  
   console.log(newstaff)
   this.props.onStaff(newstaff);
 
-    //điều kiện nhập đủ các trường
-// if (newstaff.name.includes('')||newstaff.doB.includes('')||newstaff.salaryScale.includes('')||newstaff.startDate.includes('')
-// ||newstaff.department.includes('')||newstaff.annualLeave.includes('')||newstaff.overTime.includes(''))
-// alert('Hãy điền đầy đủ thông tin')
 }    
 
 
@@ -95,6 +101,7 @@ return (
     <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
       <ModalHeader toggle={this.toggleModal}> Them nhan vien</ModalHeader>
       <ModalBody>
+         
         <LocalForm onSubmit={(values) => this.handleSubmit(values)}>
           <Row class="form-group">
             <Label htmlFor="name" md={5}>
@@ -106,12 +113,12 @@ return (
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Tên phải lớn hơn 3 và nhỏ hơn 10 ký tự"
+                placeholder="Tên từ 3 đến 10 ký tự"
                 className="form-control"
                 validators={{
                   required,
                   minLength: minLength(3),
-                  maxLength: maxLength(30),
+                  maxLength: maxLength(10),
                 }}
               ></Control>
               <Errors
@@ -121,11 +128,12 @@ return (
                 messages={{
                   required: "",
                   minLength: "Yêu cầu nhập nhiều hơn 3 ký tự",
-                  maxLength: "Yêu cầu nhập ít hơn 30 ký tự",
+                  maxLength: "Yêu cầu nhập ít hơn 10 ký tự",
                 }}
               />
             </Col>
           </Row>
+          
 
           <Row class="form-group">
             <Label htmlFor="doB" md={5}>
@@ -147,11 +155,12 @@ return (
                 model=".doB"
                 show="touched"
                 messages={{
-                  required: "Yêu cầu bắt buộc",
+                  required: "Yêu cầu chọn ngày",
                 }}
               />
             </Col>
           </Row>
+          
 
           <Row class="form-group">
             <Label htmlFor="salaryScale" md={5}>
@@ -163,21 +172,23 @@ return (
                 type="text"
                 id="salaryScale"
                 name="salaryScale"
-                placeholder="Hệ số lương phải từ 1 đến 3"
+                placeholder="Nhập dạng số từ 1-3"
                 className="form-control"
-                validators={{ isNumber, numRange }}
+                validators={{ isNumber,
+                  numRange13}}
               ></Control>
               <Errors
                 className="text-danger"
                 model=".salaryScale"
                 show="touched"
                 messages={{
-                  isNumber: "Yêu cầu bắt buộc phải là số",
-                  numRange: "Yêu cầu nhập số từ 1.0 - 3.0",
+                  isNumber: '',
+                  numRange13: "Yêu cầu nhập số từ 1-3",
                 }}
               />
             </Col>
           </Row>
+          
 
           <Row class="form-group">
             <Label htmlFor="startDate" md={5}>
@@ -199,49 +210,59 @@ return (
                 model=".startDate"
                 show="touched"
                 messages={{
-                  required: "Yêu cầu bắt buộc",
+                  required: "Yêu cầu chọn ngày",
                 }}
               />
             </Col>
           </Row>
-
+         
+          
           <Row class="form-group">
             <Label htmlFor="department" md={5}>
               Bộ Phận
             </Label>
             <Col md={7}>
-              <Control
+              <Control.select
                 model=".department"
                 type="select"
                 id="department"
                 name="department"
                 className="form-control"
-                defaultValue="default"
+                defaultValue="Dept01"
               >
-                <option value="default">Hãy chọn phòng ban</option>
                 <option value="Dept01">Sale</option>
                 <option value="Dept02">HR</option>
                 <option value="Dept03">Marketing</option>
                 <option value="Dept04">IT</option>
                 <option value="Dept05">Finance</option>
-              </Control>
+              </Control.select>
+              <Errors
+                className="text-danger"
+                model=".department"
+                show="touched"
+                messages={{
+                  required: "Yêu cầu chọn ngày",
+                }}
+              />
             </Col>
           </Row>
-
+     
+         
           <Row class="form-group">
-            <Label htmlFor="annualLeave" md={5}>
+            <Label htmlFor="annualLeave" md={5} >
               Số Ngày Nghỉ Còn Lại
             </Label>
-            <Col md={7}>
+            <Col md={7} >
               <Control
                 model=".annualLeave"
                 type="text"
                 id="annualLeave"
                 name="annualLeave"
-                placeholder="Số ngày nghỉ còn lại không nhiều hơn 10 ngày"
+                placeholder="Dưới 10 ngày "
                 className="form-control"
                 validators={{
                   isNumber,
+                  numRange10
                 }}
               ></Control>
               <Errors
@@ -249,7 +270,9 @@ return (
                 show="touched"
                 className="text-danger"
                 messages={{
-                  isNumber: "Yêu cầu nhập số ",
+                  isNumber: "",
+                  numRange10: "Yêu cầu nhập dạng số dưới 10 ngày",
+
                 }}
               />
             </Col>
@@ -265,10 +288,10 @@ return (
                 type="text"
                 id="overTime"
                 name="overTime"
-                placeholder="Số ngày làm thêm không nhiều hơn 10 ngày"
+                placeholder="Dưới 10 ngày"
                 className="form-control"
                 validators={{
-                  isNumber,
+                  isNumber,numRange10
                 }}
               ></Control>
               <Errors
@@ -276,7 +299,9 @@ return (
                 className="text-danger"
                 show="touched"
                 messages={{
-                  isNumber: "Yêu cầu nhập số ",
+                  isNumber: "",
+                  numRange10: "Yêu cầu nhập dạng số dưới 10 ngày",
+
                 }}
               />
             </Col>
@@ -289,6 +314,7 @@ return (
             </Col>
           </Row>
         </LocalForm>
+         
       </ModalBody>
     </Modal>
     <FormGroup className="add">

@@ -25,6 +25,7 @@ class Main extends Component {
   }
 
   onAddStaff = (newstaff) => {
+    
     this.setState({ staffs: [...this.props.staffs, newstaff] });
   };
 
