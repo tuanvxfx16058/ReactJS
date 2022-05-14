@@ -10,11 +10,11 @@ import { Promotions } from "./Promotions";
 export const ConfigureStore=()=>{
    const store = createStore(
       combineReducers({
-         Dishes:Dishes,
-         Leaders:Leaders,
-         Comments:Comments,
-         Promotions:Promotions
+         dishes:Dishes,
+         leaders:Leaders,
+         comments:Comments,
+         promotions:Promotions
       })
-   )
+   );
 return store;
 }
