@@ -1,9 +1,14 @@
-https://github.com/tuanvxfx16058/ASM2.git
 
 
-tên nhánh:  RJS101x_Assignment2_tuanvxfx16058@funix.edu.vn
+ASM3 Phần nâng cao.
+    đã cấu hình redux xong
+    và validate form theo có dùng Redux xong 
+  
+ 
+    https://github.com/tuanvxfx16058/ReactJS.git
 
-Phần thuyết minh dự án có trong file product.drawio (mở trong VSCode).
+    tên nhánh:  RJS101x_Assignment3.02_tuanvxfx16058@funix.edu.vn
+
 
 Vũ Xuân Tuấn.
 Xin cảm ơn Mentor
