@@ -13,20 +13,20 @@ import { connect } from 'react-redux';
 const mapStateToProps = state => {
   return {
     staffs:state.staffs,
-  department:state.department,
+  department:state.departments,
   }
 }
 
 class Main extends Component {
   constructor(props) {
     super(props);
- 
+    
     this.onAddStaff=this.onAddStaff.bind(this)
   }
 
   onAddStaff = (newstaff) => {
-    
-    this.setState({ staffs: [...this.props.staffs, newstaff] });
+    console.log(newstaff)
+    // this.setState({ staffs: [...this.props.staffs, newstaff] });
   };
 
   render() {
