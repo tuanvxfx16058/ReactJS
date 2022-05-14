@@ -24,6 +24,7 @@ class Main extends Component {
   }
 
   onAddStaff = (newstaff) => {
+    console.log(newstaff)
     this.setState({ staffs: [...this.state.staffs, newstaff] });
   };
 

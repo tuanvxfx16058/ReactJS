@@ -49,14 +49,11 @@ const RenderNhanvien = ({staff}) => {
 
 
  
-  // const onAddStaff = (staff) => {
-  //   props.onAddStaff(staff);
-  // };
+  const onAddStaff = (staff) => {
+    console.log(staff)
+    props.onAddStaff(staff);
+  };
  
-//Thêm nhân viên mới 
-// const onAddstaff=(newstaff)=>{
-//   props.onAddstaff(newstaff)
-// }
 
 //render giao diện
 //giao diện ban đầu Load là giá trị mà Hook khởi tạo ban đầu
@@ -77,7 +74,7 @@ const RenderNhanvien = ({staff}) => {
         <Col md={2}>Nhân Viên</Col>
         <Col md={1}>
           {/* <Button color="secondary"  */}
-          <AddStaff staffs={props.staffs} onStaff={props.onAddStaff} />
+          <AddStaff staffs={props.staffs} onStaff={onAddStaff} />
           {/* >Thêm</Button> */}
         </Col>
         <Col md={9}>
