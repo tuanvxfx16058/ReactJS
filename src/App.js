@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { khocauhinh } from "./redux/cauhinhReducer"; 
+import { ConfigureStore } from "./redux/ConfigureStore";
 import "./App.css";
 
 import Main from "./components/MainComponent";
 
-const store = khocauhinh()
+const store = ConfigureStore()
 
 class App extends Component {
   
